@@ -48,6 +48,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
 .bg{
     display: flex;
     flex-direction: column;
@@ -55,24 +59,72 @@ table {
     height: 26.563rem;
     width: 39.063rem;
     background-color: #2F2F2F;
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 .container{
     width: 94%;
     height: 92%;
     margin: 3% 3%;
 }
+.container-main{
+    width: 94%;
+    height: 88%;
+    padding: 3% 3%;
+}
 .row{
     display: flex;
     flex-direction: row;
 }
+a{
+    list-style: none;
+    text-decoration: none;
+}
+/* TITLE H */
+.h1{
+    font-size: 2.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: white;
+}
+
 /* HEADER */
-.header-center{
+.header{
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.header-logo{
+    align-items: flex-end;
 }
 .logo{
-    width: 4rem;
+    width: 3.5rem;
     height: 4rem;
+}
+.icons-sizing{
+    font-size: 2rem;
+    -webkit-text-stroke: 0.1rem #4FB768;
+    color:#2F2F2F;
+}
+.li-profiles{
+    margin-right: 1.5rem;
+}
+/* MAIN */
+.main{
+    height: 18rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+.site-list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.site{
+    align-items: center;
+    width: 40%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
 /* CHECK BOX */
 .tgl {
@@ -161,4 +213,11 @@ table {
 }
 .tgl-skewed:checked + .tgl-btn:active:after {
     left: 10%;
+}
+/* FOOTER */
+.footer{
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
