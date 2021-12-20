@@ -60,16 +60,19 @@ table {
     width: 39.063rem;
     background-color: #2F2F2F;
     border-radius: 1rem;
+    box-shadow: 2px 2px 2px 0.5px rgba(41, 41, 41, 0.50);
+    -moz-box-shadow: 2px 2px 2px 0.5px rgba(41, 41, 41, 0.50);
+    -webkit-box-shadow: 2px 2px 2px 0.5px rgba(41, 41, 41, 0.50);
 }
 .container{
-    width: 94%;
-    height: 92%;
-    margin: 3% 3%;
+    width: 95%;
+    height: 94%;
+    margin: 2% 2.5% 0 2.5%;
 }
 .container-main{
     width: 94%;
-    height: 88%;
-    padding: 3% 3%;
+    height: 91.5%;
+    padding: 2% 3% 3% 3%;
 }
 .row{
     display: flex;
@@ -83,48 +86,83 @@ a{
 .h1{
     font-size: 2.8rem;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
+    font-weight: 400;
     color: white;
 }
-
+.h2{
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #4FB768;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+.h5{
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 0.3rem;
+}
+.h6{
+    font-family: 'Montserrat', sans-serif;
+}
+strong{
+    color: #fff;
+    font-weight: 500;
+}
 /* HEADER */
 .header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 .header-logo{
     align-items: flex-end;
 }
 .logo{
-    width: 3.5rem;
-    height: 4rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 .icons-sizing{
-    font-size: 2rem;
-    -webkit-text-stroke: 0.1rem #4FB768;
-    color:#2F2F2F;
+    font-size: 1.6rem;
+    -webkit-text-stroke: 0.015rem white;
+    color:#4FB768;
+    text-shadow: 0 3px 0px rgba(0, 0, 0, 0.5);
 }
 .li-profiles{
-    margin-right: 1.5rem;
+    margin-right: 1rem;
+}
+.li-settings{
+    margin-right: 0.1rem;
 }
 /* MAIN */
 .main{
-    height: 18rem;
+    height: 21.2rem;
     background-color: white;
     border-radius: 1rem;
+    margin-bottom: 0.25rem;
 }
 .site-list{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .site{
     align-items: center;
+    width: 48%;
+    justify-content: space-around;
+    margin-bottom: 0.6rem;
+}
+li .site input,
+label{
+    margin-right: 1rem;
+}
+.logo-site{
     width: 40%;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+    height: 2rem;
+    margin: 0.3rem 0 0.3rem 0.3rem;
+    filter: invert(48%) sepia(50%) saturate(8%) hue-rotate(322deg) brightness(95%) contrast(97%);
 }
 /* CHECK BOX */
 .tgl {
@@ -216,8 +254,20 @@ a{
 }
 /* FOOTER */
 .footer{
-    height: 10%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: 0.8rem;
+}
+.footer a{
+    display: flex;
+    align-items: center;
+}
+.medias{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+.copyright{
+    color: #4FB768;
 }
