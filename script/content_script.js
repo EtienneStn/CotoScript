@@ -1,10 +1,25 @@
-const timeAtc = 2222;
-const getSnkrs = async function () {
-    let pick = await randomPick();
-    let cart = await atc();
-    let ship = await redirect('https://www.courir.com/fr/cart');
+const timeAtc = 222222;
+getSnkrs();
+// let pick = await randomPick();
+// let cart = await atc();
+// let ship = await redirect('https://www.courir.com/fr/cart');
+const getSnkrs =  function () {
+    const arrayFunction = [randomPick(), atc(), redir()]
+    let i = -1
+    setInterval(() => {
+        if (i < arrayFunction.length) {
+            i++
+            console.log(i);
+            // arrayFunction[i]
+        }
+    }, 5000);
 }
-let randomPick = async function () {
+// await atc();
+// await redirect('https://www.courir.com/fr/cart');
+const redir = () => {
+    redirect('https://www.courir.com/*/cart');
+}
+const randomPick = () => {
     const inStock = document.querySelectorAll('.selectable');
     const oss = document.querySelectorAll('.unselectable');
     let randSize = Math.floor(Math.random() * inStock.length);
@@ -12,27 +27,25 @@ let randomPick = async function () {
     console.log("RandSize : ", randValue);
     let sizeSelected = randValue.childNodes[1];
     console.log(sizeSelected);
-    setTimeout(
-        sizeSelected.click(), timeAtc
-    );
+    sizeSelected.click()
+    // setTimeout(
+    //     sizeSelected.click(), timeAtc
+    // );
 }
-let atc = async function () {
+const atc = () => {
     const ATCButton = document.querySelector('#add-to-cart');
-    setTimeout(
-        ATCButton.click(), timeAtc
-    );
-}
-let get = function (url) {
-    var req = new XMLHttpRequest()
-    req.open('GET', url, true);
-}
-let redirect = async function (url) {
-    setTimeout(
-        window.location.href = url, timeAtc
-    );
+    ATCButton.click();
 }
 
-getSnkrs();
+const redirect = (url) => {
+    window.location.href = url;
+}
+
+
+/* let get = function (url) {
+    var req = new XMLHttpRequest()
+    req.open('GET', url, true);
+} */
 //let getUrl = window.location
 //console.log(getUrl)
 //let url = get('file:///D:/Code/Coto/CotoFnF/Script/popup/cotoscript-popup.html');
